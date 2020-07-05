@@ -1,0 +1,14 @@
+<view class='idchoice'>
+	<view class='idchoice-teacher' bindtap="clickt">
+		<image src='../../imgs/idchoice/teacher.png'></image>
+		<view>
+			<text>我是老师</text>
+		</view>
+	</view>
+	<view class='idchoice-student' bindtap="clicks">
+		<image src='../../imgs/idchoice/student.png'></image>
+		<view>
+			<text>我是学生</text>
+		</view>
+	</view>
+</view>

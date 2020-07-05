@@ -1,0 +1,45 @@
+<view class='tsignin'>
+  <view class='tsignin-inner'>
+    <view class="table">
+      <view class="tr bg-w">
+        <view class="th">签 到 日 期</view>
+        <view class="th">开 始 时 间</view>
+        <view class="th ">结 束 时 间</view>
+        <view class="th ">状 态</view>
+      </view>
+
+      <scroll-view scroll-y='true' class='content'>
+        <view wx:for="{{listData}}" wx:key="key">
+          <view class="tr">
+            <view class="td">{{item.data}}</view>
+            <view class="td">{{item.airtime}}</view>
+            <view class="td">{{item.endtime}}</view>
+            <view class='td'>{{item.state}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='tsignin-button'>
+    <button bindtap="add">添 加 签 到</button>
+  </view>
+  <view class="nbv">
+    <view bindtap="leave">
+      <image src="../../imgs/common/leaveManagement.png"></image>
+      <text>请 假 管 理</text>
+    </view>
+    <view bindtap="signin">
+      <image src="../../imgs/common/signInManagement.png"></image>
+      <text>签 到 管 理</text>
+    </view>
+    <view bindtap="search">
+      <image src="../../imgs/common/InformationQuery.png"></image>
+      <text>信 息 查 询</text>
+    </view>
+  </view>
+  <modal hidden="{{hiddenmodalput}}" title="添 加 签 到" confirm-text="添 加" cancel-text="取 消" bindcancel="cancelM" bindconfirm="confirmM" class='modal'>
+      <input  placeholder="请输入日期，如2020/07/03" bindinput="datea" auto-focus/>
+      <input placeholder="请输入开始签到时间,如15：30" bindinput="airtime" />
+      <input placeholder="请输入结束签到时间，如15：35" bindinput="endtime"></input>
+   </modal>
+</view>

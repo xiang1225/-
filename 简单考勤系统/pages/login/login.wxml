@@ -1,0 +1,18 @@
+<view class='login'>
+  <view class='login-img'>
+    <image src='../../imgs/login/signIn.png'></image>
+  </view>
+  <view class='login-form'>
+    <form>
+      <view class='login-form-input'>
+        <input  placeholder='请输入您的姓名' bindinput="nickName"></input>
+      </view>
+      <view class='login-form-input'>
+        <input placeholder='请输入您的证件号' bindinput="studyid"></input>
+      </view>
+      <view class='login-form-button'>
+        <button form-type='submit' bindtap="Submit">登  录</button>
+      </view>
+    </form>
+  </view>
+</view>

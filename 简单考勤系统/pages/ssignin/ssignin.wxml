@@ -1,0 +1,56 @@
+<!--pages/ssignin/ssign.wxml-->
+<view class='tsignin'>
+	<view class='tsignin-inner'>
+		<view class="table">
+			<view class="tr bg-w">
+				<view class="th">发 起 人</view>
+				<view class="th">日 期</view>
+				<view class="th">开 始 时 间</view>
+				<view class="th ">结 束 时 间</view>
+				<view class="th ">状 态</view>
+			</view>
+			<scroll-view scroll-y='true' class="content">
+				<block wx:for="{{listData}}" wx:key="key">
+					<view wx:if='{{item.state==1}}'>
+						<view bindtap="signin" data-id="{{item.id}}" class="tr">
+							<view class="td">{{item.nickName}}</view>
+							<view class="td">{{item.data}}</view>
+							<view class="td">{{item.airtime}}</view>
+							<view class="td">{{item.endtime}}</view>
+							<view class='td'>正在进行</view>
+						</view>
+					</view>
+					<view wx:elif='{{item.state==0}}'>
+						<view style="background:#666" class="tr">
+							<view class="td">{{item.nickName}}</view>
+							<view class="td">{{item.data}}</view>
+							<view class="td">{{item.airtime}}</view>
+							<view class="td">{{item.endtime}}</view>
+							<view class='td'>还未开始</view>
+						</view>
+					</view>
+          <view wx:elif='{{item.state==2}}'>
+						<view style="background:#666" class="tr">
+							<view class="td">{{item.nickName}}</view>
+							<view class="td">{{item.data}}</view>
+							<view class="td">{{item.airtime}}</view>
+							<view class="td">{{item.endtime}}</view>
+							<view class='td'>已结束</view>
+						</view>
+					</view>
+          <view wx:elif='{{item.state==3}}'>
+						<view style="background:#666" class="tr">
+							<view class="td">{{item.nickName}}</view>
+							<view class="td">{{item.data}}</view>
+							<view class="td">{{item.airtime}}</view>
+							<view class="td">{{item.endtime}}</view>
+							<view class='td'>已签到</view>
+						</view>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+	<modal hidden="{{hiddenmodalput}}" title="点 击 签 到" confirm-text="签到" no-cancel='true' bindconfirm="confirmM" class='modal'>
+	</modal>
+</view>

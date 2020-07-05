@@ -1,0 +1,133 @@
+page {
+  height: 100%;
+}
+
+.tsignin {
+  height: 100%;
+}
+
+.tsignin-inner {
+  height: 60%;
+}
+
+.table {
+  border: 0px solid darkgray;
+  font-size: 12px;
+  height: 100%;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.td {
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-w {
+  background: rgb(38, 202, 137);
+  height: 10%;
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: rgb(38, 202, 137);
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+.content {
+  max-height: 350px;
+  background: #fcfcfc;
+}
+
+.content button{
+  display: inline-block;
+  width: 40%;
+  font-size: 12px;
+  padding: 0;
+  margin: 0 2%;
+  background: rgb(38, 202, 137);
+  color: #fff;
+}
+
+.tsignin-button {
+  height: 10%;
+}
+.tsignin-button .tiss{
+  margin: 0 10px;
+  font-size: 10px;
+  color: red;
+}
+
+.tsignin-button button{
+  background:rgb(38,202,137);
+  color:#fff;
+  width: 20%;
+  display: inline-block;
+  padding: 0;
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.tsignin-button input{
+  border: 1px rgb(38, 202, 137) solid;
+  display: inline-block;
+  width: 30%;
+  vertical-align:top;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.tsignin-button text{
+  display: inline-block;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  vertical-align:top;
+}
+.nbv{
+  height: 100px;
+  position: absolute;
+  width:100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fcfcfc;
+}
+
+.nbv view{
+  display: inline-block;
+  width: 30%;
+}
+
+.nbv view image{
+  height: 100rpx;
+  margin: 0 auto;
+  width: 100rpx;
+  display: block;
+}
+.nbv view text{
+  margin: 0 auto;
+  width: 200rpx;
+  display: block;
+}
+
+.export {
+  margin:0 60px;
+  margin-top: 30px;
+}
+
+.export button {
+  background: rgb(38, 202, 137);
+  color: #fff;
+}

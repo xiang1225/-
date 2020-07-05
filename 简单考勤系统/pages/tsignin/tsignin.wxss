@@ -1,0 +1,97 @@
+page {
+  height: 100%;
+}
+
+.tsignin {
+  height: 100%;
+}
+
+.tsignin-inner {
+  height: 75%;
+}
+
+.table {
+  border: 0px solid darkgray;
+  font-size: 12px;
+  height: 100%;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+}
+
+.td {
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-w {
+  background: rgb(38, 202, 137);
+  height: 10%;
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: rgb(38, 202, 137);
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+.content {
+  max-height: 350px;
+  background: #fcfcfc;
+}
+
+.tsignin-button {
+  height: 10%;
+  margin: 0 60px;
+}
+
+.tsignin-button button {
+  background: rgb(38, 202, 137);
+  color: #fff;
+}
+
+.nbv {
+  height: 100px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fcfcfc;
+}
+
+.nbv view {
+  display: inline-block;
+  width: 30%;
+}
+
+.nbv view image {
+  height: 100rpx;
+  margin: 0 auto;
+  width: 100rpx;
+  display: block;
+}
+
+.nbv view text {
+  margin: 0 auto;
+  width: 200rpx;
+  display: block;
+}
+
+.modal input{
+  border: 1rpx solid rgb(38,202,137);
+  border-radius: 50rpx;
+  margin:10px 0;
+  padding: 0 10px;
+}

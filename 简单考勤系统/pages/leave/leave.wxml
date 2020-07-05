@@ -1,0 +1,55 @@
+<view class='tsignin'>
+	<view class='tsignin-inner'>
+		<view class="table">
+			<view class="tr bg-w">
+				<view class="th">序 号</view>
+				<view class="th">姓 名</view>
+				<view class="th">开 始 日 期</view>
+				<view class="th ">结 束 日 期</view>
+				<view class="th ">操 作</view>
+			</view>
+
+			<scroll-view scroll-y='true' class='content'>
+				<block wx:for="{{listData}}" wx:key="key">
+					<view class="tr" >
+						<view class="td">{{item.id}}</view>
+						<view class="td">{{item.studenname}}</view>
+						<view class="td">{{item.airtime}}</view>
+						<view class="td">{{item.endtime}}</view>
+						<view class='td' wx:if="{{item.state==0}}">
+            <text>已 销 假</text>
+						</view>
+            <view class='td'  wx:else> 
+              <button id="{{item.id}}" bindtap="terminate" >销 假</button><button bindtap="extend" data-id="{{item.id}}">续 假</button>
+            </view>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+	<view class='tsignin-button'>
+		<button bindtap="add">添 加 请 假</button>
+	</view>
+	<view class="nbv">
+		<view bindtap="leave">
+			<image src="../../imgs/common/leaveManagement.png"></image>
+			<text>请 假 管 理</text>
+		</view>
+		<view bindtap="signin">
+			<image src="../../imgs/common/signInManagement.png"></image>
+			<text>签 到 管 理</text>
+		</view>
+		<view bindtap="search">
+			<image src="../../imgs/common/InformationQuery.png"></image>
+			<text>信 息 查 询</text>
+		</view>
+	</view>
+	<modal hidden="{{hiddenmodalput}}" title="添 加 请 假" confirm-text="添 加" cancel-text="取 消" bindcancel="cancelM" bindconfirm="confirmM" class='modal'>
+		<input  placeholder="请输入姓名" bindinput="studentname" auto-focus />
+		<input  placeholder="请输入假期开始日期,如2020/7/3" bindinput="airtime" />
+		<input  placeholder="请输入假期结束日期，如2020/7/3" bindinput="endtime"></input>
+	</modal>
+	<modal hidden="{{hiddenmodalput1}}" title="续 假" confirm-text="续 假" cancel-text="取 消" bindcancel="cancel" bindconfirm="confirm" class='modal'>
+		<input  placeholder="请输入续期结束日期，如2020/07/03" bindinput="extendtime"></input>
+	</modal>
+</view>

@@ -1,0 +1,45 @@
+<view class='tsignin'>
+	<view class='tsignin-button'>
+		<input bindinput="airtime"></input>
+		<text>到</text>
+		<input bindinput="endtime"></input>
+		<button bindtap="searchs">查 询</button>
+		<text class='tiss'>*输入查询时间期间，如2017/9/21，若两个日期一样则查询当天出勤信息</text>
+	</view>
+	<view class='tsignin-inner'>
+		<view class="table">
+			<view class="tr bg-w">
+				<view class="th">i d</view>
+				<view class="th">姓 名</view>
+				<view class="th">签 到 次 数</view>
+				<view class="th ">请 假 次 数</view>
+			</view>
+
+			<scroll-view scroll-y='true' class='content'>
+					<view class="tr">
+						<view class="td">{{listData.id}}</view>
+						<view class="td">{{listData.nickName}}</view>
+						<view class="td">{{listData.snumber}}</view>
+						<view class="td">{{listData.lnumber}}</view>
+					</view>
+			</scroll-view>
+		</view>
+	</view>
+  <view class="export">
+    <button>导 出 表 格</button>
+  </view>
+	<view class="nbv">
+		<view bindtap="leave">
+			<image src="../../imgs/common/leaveManagement.png"></image>
+			<text>请 假 管 理</text>
+		</view>
+		<view bindtap="signin">
+			<image src="../../imgs/common/signInManagement.png"></image>
+			<text>签 到 管 理</text>
+		</view>
+		<view bindtap="search">
+			<image src="../../imgs/common/InformationQuery.png"></image>
+			<text>信 息 查 询</text>
+		</view>
+	</view>
+</view>
